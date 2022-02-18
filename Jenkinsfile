@@ -35,7 +35,7 @@ pipeline{
            "files" :[
            {
            "pattern":"target/*.jar",
-           "target":"art-doc-devo-loc"
+           "target":"passport-art"
            }
            ]
          }''',
