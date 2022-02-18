@@ -30,7 +30,7 @@ pipeline{
     stage('Deploy to artifactory'){
         steps{
         rtUpload(
-         serverId : 'passport-art',
+         serverId : 'sample-jfrog',
          spec :'''{
            "files" :[
            {
