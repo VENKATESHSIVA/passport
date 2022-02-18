@@ -26,6 +26,23 @@ pipeline{
                 waitForQualityGate abortPipeline: true
             }
         }
+
+    stage('Deploy to artifactory'){
+        steps{
+        rtUpload(
+         serverId : 'ARTIFACTORY_SERVER',
+         spec :'''{
+           "files" :[
+           {
+           "pattern":"target/*.jar",
+           "target":"art-doc-devo-loc"
+           }
+           ]
+         }''',
+         
+      )
+      }
+     }
     
      
   }
